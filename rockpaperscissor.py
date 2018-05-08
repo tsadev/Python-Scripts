@@ -203,6 +203,102 @@ while not playedSecond:
         time.sleep(1)
        
 
+if human_score != 2 and comp_score != 2:
+    playedExtra = False
+    while not playedExtra:
+        print("Extra round")
+        time.sleep(1)
+        comp_choices2 = ["rock", "paper", "scissor"]
+        comp2 = game_random.choice(comp_choices2)
+        print(comp2)
+        human = input("Rock Paper or Scissor: ")
+        if human == "rock" and comp2 == "scissor":
+            human_score = human_score + 1
+            comp_score = comp_score + 0
+            print("Rock destroys scissor")
+            time.sleep(1)
+            print("Human: " , human_score)
+            print("Computer: " , comp_score)
+            playedExtra = True
+            time.sleep(1)
+        elif human == "scissor" and comp2 == "rock":
+            human_score = human_score + 0
+            comp_score = comp_score + 1
+            print("Rock destroys scissor")
+            time.sleep(1)
+            print("Human: " , human_score)
+            print("Computer: " , comp_score)
+            playedExtra = True
+            time.sleep(1)
+        elif human == "paper" and comp2 == "rock":
+            human_score = human_score + 1
+            comp_score = comp_score + 0
+            print("Rock gets covered with paper")
+            time.sleep(1)
+            print("Human: " , human_score)
+            print("Computer: " , comp_score)
+            playedExtra = True
+            time.sleep(1)
+        elif human == "rock" and comp2 == "paper":
+            human_score = human_score + 0
+            comp_score = comp_score + 1
+            print("Rock gets covered with paper")
+            time.sleep(1)
+            print("Human: " , human_score)
+            print("Computer: " , comp_score)
+            playedExtra = True
+            time.sleep(1)
+        elif human == "scissor" and comp2 == "paper":
+            human_score = human_score + 1
+            comp_score = comp_score + 0
+            print("Scissor cuts paper")
+            time.sleep(1)
+            print("Human: " , human_score)
+            print("Computer: " , comp_score)
+            playedExtra = True
+            time.sleep(1)
+        elif human == "paper" and comp2 == "scissor":
+            human_score = human_score + 0
+            comp_score = comp_score + 1
+            print("Scissor cuts paper")
+            time.sleep(1)
+            print("Human: " , human_score)
+            print("Computer: " , comp_score)
+            playedExtra = True
+        elif human == "rock" and comp2 == "rock":
+            human_score = human_score + 0
+            comp_score = comp_score + 0
+            print("Nothing happens")
+            time.sleep(1)
+            print("Human: " , human_score)
+            print("Computer: " , comp_score)
+            playedExtra = False
+            time.sleep(1)
+        elif human == "paper" and comp2 == "paper":
+            human_score = human_score + 0
+            comp_score = comp_score + 0
+            print("Nothing happens")
+            time.sleep(1)
+            print("Human: " , human_score)
+            print("Computer: " , comp_score)
+            playedExtra = False
+            time.sleep(1)
+        elif human == "scissor" and comp2 == "scissor":
+            human_score = human_score + 0
+            comp_score = comp_score + 0
+            print("Nothing happens")
+            time.sleep(1)
+            print("Human: " , human_score)
+            print("Computer: " , comp_score)
+            playedExtra = False
+            time.sleep(1)
+        elif human_score == 2 or comp_score == 2:
+            break
+        else:
+            playedExtra = False
+            time.sleep(1)
+
+
 time.sleep(1)
             
 if human_score == 2:
